@@ -1,0 +1,265 @@
+:root {
+  --color-principal: #4e358b;
+  --color-secundario: #252347;
+  --color-hover: #693ba1;
+  --color-texto: #ffffff;
+  --color-fondo: #3f2b70;
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
+  src: url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "RobotoCondensed", sans-serif;
+}
+
+.barra-lateral {
+  position: sticky; /*Sirve para que al hacer scroll la barra tambien lo haga*/
+  top: 10px; /* Espacio desde la parte superior de la ventana */
+  width: auto;
+  height: auto;
+  background-color: var(--color-secundario);
+  padding: 1rem; /* Espaciado interno de la barra lateral*/
+}
+
+.dropdown-item {
+  color: var(--color-texto);
+  transition: background-color 1s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-hover);
+  color: var(--color-texto);
+}
+
+a {
+  display: flex;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+
+a:hover {
+  background-color: var(--color-hover);
+  color: var(--color-texto);
+}
+
+a:focus {
+  background-color: var(--color-hover);
+  color: var(--color-texto);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contenido-barra-lateral {
+  position: sticky; /*Sirve para que al hacer scroll la barra tambien lo haga*/
+  top: 10px; /* Espacio desde la parte superior de la ventana */
+}
+
+.barra-horizontal {
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+}
+
+.barra-horizontal:focus {
+  color: var(--color-texto);
+}
+.nav-link:focus {
+  color: var(--color-texto);
+}
+
+.nav-link.activo {
+  background-color: var(--color-hover);
+  color: var(--color-texto);
+  border-radius: 5px;
+}
+
+.contenedor-caroucel {
+  justify-content: center;
+  width: 100%; /* O usa max-width */
+  max-width: 900px;
+  height: auto; /* Deja que el contenido lo defina */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.carousel-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-tamanio {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.img-tamanio-card {
+  width: 100%;
+  height: auto;
+  max-height: 288px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.img-tamanio-compra {
+  width: 100px;
+  height: auto;
+  max-height: 200px;
+  border-radius: 5px;
+}
+
+.dropdown-menu {
+  background-color: var(--color-principal);
+}
+
+.img-tamanio-biblioteca {
+  width: 75px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.borde {
+  padding: 10px;
+  border: solid 1px var(--color-texto);
+  border-radius: 10px;
+}
+
+.contenedor-card {
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+}
+
+.contenedor-card-noticia {
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+  border-radius: 20px;
+  padding: 1rem; /* Espaciado interno de la barra lateral*/
+}
+
+.card-body {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  position: relative; /* Para el efecto de desplazamiento */
+  min-height: 200px; /* Ajusta según el tamaño de los botones */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-body .btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Evita clics cuando no está visible */
+}
+
+.card:hover .card-body {
+  border: transparent;
+  transform: translateY(-65px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-body .btn {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.card {
+  background-color: var(--color-secundario);
+  border: transparent;
+  height: auto; /* Deja que el contenido lo defina */
+  max-height: 475px; /* aqui el alto que quiera */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* solo muestra 2 líneas */
+  -webkit-box-orient: vertical;
+}
+
+.card-title,
+.card-text {
+  margin-bottom: auto; /* controla el espacio entre elementos */
+}
+
+.accordion-body {
+  color: var(--color-texto);
+}
+
+.contenedor-card2 {
+  background-color: var(--color-principal);
+  width: auto;
+  border-radius: 40px;
+}
+
+.color-fondo {
+  background-color: var(
+    --color-fondo
+  ); /* Color de fondo del contenido principal*/
+}
+
+.texto-truncado {
+  display: -webkit-box; /* Usa el modelo de caja flexible de WebKit */
+  -webkit-line-clamp: 3; /* Limita el texto a 4 línea */
+  -webkit-box-orient: vertical; /* Hace que el texto se corte de forma vertical */
+  overflow: hidden; /* Oculta el texto sobrante */
+}
+
+.card-tittle {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-light {
+  color: var(--color-texto);
+}
+
+
+.busqueda-personalizado {
+  background-color: transparent !important; /* Fondo transparente */
+  border: 1px solid white !important; /* Borde blanco */
+  color: var(
+    --color-texto
+  ) !important; /* Texto blanco */ /* Asegura que el input tenga buen padding */
+}
+
+/* Cambiar el color del placeholder */
+.busqueda-personalizado::placeholder {
+  color: var(--color-texto) !important; /* Color placeholder */
+}
+
+.form-control:focus {
+  box-shadow: none !important; /* Sin sombra al hacer clic */
+  border-color: var(
+    --color-texto
+  ) !important; /* Cambia el color del borde al hacer clic */
+}
+
+.nav-link {
+  color: var(--color-texto);
+}
+
+.nav-link:hover {
+  color: var(--color-texto);
+}
+
