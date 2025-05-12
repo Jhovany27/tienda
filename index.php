@@ -31,11 +31,11 @@ Estados Unidos, 1899. Arthur Morgan y la banda de Van der Linde son forajidos bu
 
   <div class="d-flex color-fondo">
     <!-- Sidebar -->
-    <?php include '../components/sidebar.php'; ?>
+    <?php include 'components/sidebar.php'; ?>
     
     <div class="container-fluid">
       <!-- Navbar -->
-      <?php include '../components/navbar.php'; ?>
+      <?php include 'components/navbar.php'; ?>
 
       <br>
       <!-- Carousel -->
